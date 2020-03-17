@@ -1,0 +1,106 @@
+#dashboard{
+    margin: 30px;
+}
+.table{
+    margin-top: 30px;
+}
+
+.employeeForm{
+    margin: 20 80 80 80px;
+    display: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+div.dropdown-menu a{
+    cursor: pointer;
+} 
+
+td.deleteEmployee{
+    cursor: pointer;
+}
+
+td.editEmployee{
+    cursor: pointer;
+}
+.thead{
+    background-color: #3a3a3a;
+    color: white;
+}
+.tp{
+    margin-left: 80px;
+}
+button#addPlayers {
+    color: white;
+    background-color: #47acf0;
+    
+    padding: 1.2rem;
+    width: 40%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    
+}
+button#addPlayers:hover{
+    background-color: #129ffd;
+}
+button#SavePlayer{
+    color: white;
+    background-color: #47acf0;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    width: 40%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 40%;
+}
+button#SavePlayer:hover{
+    background-color: #129ffd;
+}
+#formTwo{
+    border-radius: 10px;
+    background-color: white;
+    
+}
+#cancel{
+    color: white;
+    background-color: #969696;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    width: 40%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 40%;
+}
+#cancel:hover{
+    background-color: #696969;
+}
+input{
+    text-align: center;
+    width: 40%;
+}
+h2{
+    
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    
+}
+h1{
+    background-color: #3a3a3a;
+    color: white;
+}
+.alert-success{
+    background-color: #3a3a3a;
+    border-color: #161a17;
+}
+.fill{
+    text-align: center;
+    border: 3px solid black;
+    color: white;
+    background-color: #3a3a3a;
+}
+

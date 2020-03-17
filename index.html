@@ -1,0 +1,137 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    
+        <!-- jquery import -->
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        font awesome for the icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <script src = "https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+        
+        
+
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyD9Lp81uL1ijERCD4gXqKgeoZf6k8PuymI",
+            authDomain: "fir-project1-c0047.firebaseapp.com",
+            databaseURL: "https://fir-project1-c0047.firebaseio.com",
+            projectId: "fir-project1-c0047",
+            storageBucket: "fir-project1-c0047.appspot.com",
+            messagingSenderId: "968654620623",
+            appId: "1:968654620623:web:591a9cbc967395b51db4ba",
+            measurementId: "G-5EDCDW101R"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          //firebase.analytics();
+        </script>
+
+    </head>
+    <body id = page1>
+        
+        <div class="alert alert-success text-center" id="dashboard" role="alert">
+             <h1> Players DASHBOARD </h1>
+        </div>
+
+     
+        <div class="container" >
+                <form id="formOne">
+                  <button type="button" id = "addPlayers">ADD PLAYER</button>
+                    <!-- <a class="btn btn-dark btn-block text-white mb-4" id="AddPlayer" href="CreateProfile.html">ADD PROFILE</a> -->
+                <!-- <button class="btn btn-success" id="createEmployee" onclick="createPlayers()"> 
+                    Create Profile <i class="fa fa-plus" aria-hidden="true"></i>
+                </button> -->
+
+               
+                
+                
+                <table class="table m-3 playerTable">
+                    <thead class="thead">
+                      <tr>
+                        <th scope="col">PLAYER RANK</th>
+                        <th scope="col">PLAYER NAME</th>
+                        <th scope="col">PLAYER TEAM</th>
+                        <th scope="col">PLAYER SPORTS</th>
+                        <th scope="col">JERSEY NO.</th>
+                        <th scope="col">ACTION</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+              </form>
+
+              <form id = "CreateProfile">
+
+                    <div class = "container" id = "formTwo" style="display: none;" >
+                     
+                      <form class="mt-5" id = "AddPlayerForm">
+                        
+                        <div class="fill">
+                          <!-- <div class="form-group row mt-2"> -->
+                                  <label for="input" class="col-sm-5 col-form-label-lg text-black">Player Rank:</label>
+                                  <div class="blanks">
+                                    <input type="string" class="form-control-lg" id="rank" placeholder="Player Rank">
+                                  </div>
+                                <!-- </div> -->
+                  
+                                <!-- <div class="form-group row"> -->
+                                  <label for="input" class="col-sm-5 col-form-label-lg text-black">Player Name:</label>
+                                  <div class="blanks">
+                                    <input type="string" class="form-control-lg" id="name" placeholder="Player Name">
+                                  </div>
+                                <!-- </div> -->
+            
+                                <!-- <div class="form-group row"> -->
+                                    <label for="input" class="col-sm-5 col-form-label-lg text-black">Player Team:</label>
+                                    <div class="blanks">
+                                      <input type="string" class="form-control-lg" id="team" placeholder="Player Team">
+                                    </div>
+                                  <!-- </div> -->
+            
+                                  <!-- <div class="form-group row"> -->
+                                      <label for="input" class="col-sm-5 col-form-label-lg text-black">Player Sports:</label>
+                                      <div class="blanks">
+                                        <input type="string" class="form-control-lg" id="sports" placeholder="Player Sports">
+                                      </div>
+                                    <!-- </div> -->
+            
+                                    <!-- <div class="form-group row"> -->
+                                        <label for="input" class="col-sm-5 col-form-label-lg text-black">Jersey No:</label>
+                                        <div class="blanks">
+                                          <input type="string" class="form-control-lg" id="jersey" placeholder="Jersey No.">
+                                        </div>
+                                      <!-- </div> -->
+                  
+                              
+                                              
+                                      <div class="form-group">
+                                         
+                                          <button type="button" id= "SavePlayer" onclick="addPlayer()">SAVE</button>
+                                          <button type="button" id= "cancel">CANCEL</button>
+                                          
+                                         
+                                        </div> 
+                                      </div>
+                                     </form>
+                                    
+                    </div>                       
+                  </form>                
+        </div>
+    </body>
+</html>
+
+<!-- initialize script -->
+<script src="initialize.js"></script>
+<!-- custom script -->
+<script src="script.js"></script>
